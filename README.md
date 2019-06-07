@@ -1,4 +1,4 @@
-MUZIX Application
+MUZIX Application using MongoDB
 
 This app allows users to do following tasks:
 a.Save music information such as trackId,trackName, comments of the music.

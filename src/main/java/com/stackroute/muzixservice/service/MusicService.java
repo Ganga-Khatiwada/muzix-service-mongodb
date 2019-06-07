@@ -16,6 +16,6 @@ public interface MusicService {
 
     public Music updateTrack(Music music) throws TrackNotFoundException;
 
-    public Music getTrackByName(String trackName)throws TrackNotFoundException;
+    //public Music getTrackByName(String trackName)throws TrackNotFoundException;
 }
 

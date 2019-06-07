@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
 import java.util.List;
+import java.util.Optional;
 
 @CacheConfig(cacheNames = "music")
 @Primary
@@ -76,21 +77,22 @@ public class MusicServiceImpl implements MusicService {
         }
     }
 
-    @Override
-    public Music getTrackByName(String trackName){
 
-        List<Music> lists = null;
-        lists = musicRepository.getTrackByName(trackName);
-        if (lists.equals(null))
-        {
-            try {
-                throw new TrackNotFoundException("exception");
-            } catch (TrackNotFoundException trackNotFoundException) {
-                trackNotFoundException.printStackTrace();
-            }
-        }
-        return music;
-    }
+//    @Override
+//    public Music getTrackByName(String trackName){
+//
+//        List<Music> lists = null;
+//        lists = musicRepository.getTrackByName(trackName);
+//        if (lists.equals(null))
+//        {
+//            try {
+//                throw new TrackNotFoundException("exception");
+//            } catch (TrackNotFoundException trackNotFoundException) {
+//                trackNotFoundException.printStackTrace();
+//            }
+//        }
+//        return music;
+//    }
 
     @PostConstruct
     public void loadData(){
